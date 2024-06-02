@@ -69,6 +69,8 @@ public partial class MainWindow : Window
         var provider = new RepositoryProvider(openFolderDialog.FolderName);
         LineSeparatorFix = new LineSeparatorFix(provider);
         CurrentGitRepositoryPath.Text = openFolderDialog.FolderName;
+        CurrentGitRepositoryPath.ToolTip = openFolderDialog.FolderName;
+        CurrentGitRepositoryPath.Foreground = Brushes.Black;
         _configInfo.GitRepositoryPath = openFolderDialog.FolderName;
         _configInfo.Save();
     }
